@@ -8,21 +8,75 @@
     <title>Weather App</title>
 </head>
 <body>
-    <h1 class="display-1 text-center fw-bold bg-success p-3 text-white">The Weather Application</h1>
-
-    <div id=search-bar class="text-center bg-success bg-opacity-50 col-4 p-3">
-        <h2 class="text-start fw-bold"> Search for a city:</h2>
-        <button class="btn btn-outline-dark btn-lg fw-bold border-2">Search</button>
-
-    </div >
-    <div><h2 class= "fw-bold">Weather now</h2></div>
-    <div class="container">
-        <div class="container col-2.5 border bg-dark text-white my-5"><h2>Day 2</h2></div>
-        <div class="container col-2.5 border bg-dark text-white my-5"><h2>Day 3</h2></div>
-        <div class="container col-2.5 border bg-dark text-white my-5"><h2>Day 4</h2></div>
-        <div class="container col-2.5 border bg-dark text-white my-5"><h2>Day 5</h2></div>
-        <div class="container col-2.5 border bg-dark text-white my-5"><h2>Day 5</h2></div>
+    <section>
+        <h1 class="display-1 text-center fw-bold bg-success p-3 text-white">The Weather Application</h1>
+    </section>
+    
+    <section class="container p-3">
+        <div id=search-bar class=" row bg-success bg-opacity-50">
+            <form id="form" > 
+                <h2 class="col-4">Search here by city name:</h2>
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="search by city">
+                <button class="btn bg-success text-white">Search</button>
+              </form>
+            <div>
+                <ul class="list-group fst-italic">Previous searches:</ul>
+                
+            </div>
+        </div >
+    </section>
+    
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h2 class= "fw-bold col-6  my-3 p-3 bg-success bg-opacity-50 border-outline border-2">Weather now</h2>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <div class="container-lg my-5">
+        <div class="row justify-content-start">
+            <div class="col p-5 border bg-dark text-white">
+                <p class="fw-bold">Day 2</p>
+                <p>Date</p>
+                <p>Temperature:</p>
+                <p>Wind speed:</p>
+                <p>Humidity:</p>
+            </div>
+            <div class="col p-5 border bg-dark text-white">
+                <p class="fw-bold">Day 3</p>
+                <p>Date</p>
+                <p>Temperature:</p>
+                <p>Wind speed:</p>
+                <p>Humidity:</p>
+            </div>
+            <div class="col p-5 border bg-dark text-white">
+                <p class="fw-bold">Day 4</p>
+                <p>Date</p>
+                <p>Temperature:</p>
+                <p>Wind speed:</p>
+                <p>Humidity:</p>
+            </div>
+            <div class="col p-5 border bg-dark text-white">
+                <p class="fw-bold">Day 5</p>
+                <p>Date</p>
+                <p>Temperature:</p>
+                <p>Wind speed:</p>
+                <p>Humidity:</p>
+            </div>
+            <div class="col p-5 border bg-dark text-white">
+                <p class="fw-bold">Day 6</p>
+                <p>Date</p>
+                <p>Temperature:</p>
+                <p>Wind speed:</p>
+                <p>Humidity:</p>
+            </div>
+        </div>
     </div>
+            
+
+     
     
 
 
