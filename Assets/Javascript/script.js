@@ -86,19 +86,19 @@ function getWeatherForecast(cityTest) {
     .then(function (data) {
       console.log(data);
      var day2Temp = dayTwo.children[2];
-      day2Temp.textContent = "Temperature: " + Math.round(data.list[0].main.temp) + "°C";
+      day2Temp.textContent = "Temperature: " + Math.round(data.list[5].main.temp) + "°C";
       console.log(day2Temp);
 
       var dayTwoHumidity = dayTwo.children[4];
-      dayTwoHumidity.textContent = "Humidity: " + data.list[0].main.humidity;
+      dayTwoHumidity.textContent = "Humidity: " + data.list[5].main.humidity;
       console.log(dayTwoHumidity);
 
       var dayTwoDate = dayTwo.children[0];
-      dayTwoDate.textContent = data.list[0].dt_txt;
+      dayTwoDate.textContent = data.list[5].dt_txt;
       console.log(dayTwoDate);
 
       var dayTwoWindspeed = dayTwo.children[3];
-      dayTwoWindspeed.textContent ="Windspeed: " + data.list[0].wind.speed;
+      dayTwoWindspeed.textContent ="Windspeed: " + data.list[5].wind.speed;
       console.log(dayTwoWindspeed);
 
       var icon = data.list[0].weather[0].icon;
@@ -110,22 +110,22 @@ function getWeatherForecast(cityTest) {
       //
 
       var day3Temp = dayThree.children[2];
-      day3Temp.textContent = "Temperature: " + Math.round(data.list[8].main.temp) + "°C";
+      day3Temp.textContent = "Temperature: " + Math.round(data.list[13].main.temp) + "°C";
       console.log(day3Temp);
 
       var day3Humidity = dayThree.children[4];
-      day3Humidity.textContent = "Humidity: " + data.list[8].main.humidity;
+      day3Humidity.textContent = "Humidity: " + data.list[13].main.humidity;
       console.log(day3Humidity);
 
       var day3Date = dayThree.children[0];
-      day3Date.textContent = data.list[8].dt_txt;
+      day3Date.textContent = data.list[13].dt_txt;
       console.log(day3Date);
 
       var day3Windspeed = dayThree.children[3];
-      day3Windspeed.textContent ="Windspeed: " + data.list[8].wind.speed;
+      day3Windspeed.textContent ="Windspeed: " + data.list[13].wind.speed;
       console.log(day3Windspeed);
 
-      var icon3 = data.list[8].weather[0].icon;
+      var icon3 = data.list[13].weather[0].icon;
       var icon3Link = `https://openweathermap.org/img/wn/${icon3}.png`;
       var day3Icon = dayThree.children[1];
       day3Icon.setAttribute("src", icon3Link);
@@ -133,22 +133,22 @@ function getWeatherForecast(cityTest) {
 
       //
       var day4Temp = dayFour.children[2];
-      day4Temp.textContent = "Temperature: " + Math.round(data.list[16].main.temp) + "°C";
+      day4Temp.textContent = "Temperature: " + Math.round(data.list[21].main.temp) + "°C";
       console.log(day4Temp);
 
       var day4Humidity = dayFour.children[4];
-      day4Humidity.textContent = "Humidity: " + data.list[16].main.humidity;
+      day4Humidity.textContent = "Humidity: " + data.list[21].main.humidity;
       console.log(day4Humidity);
 
       var day4Date = dayFour.children[0];
-      day4Date.textContent = data.list[16].dt_txt;
+      day4Date.textContent = data.list[21].dt_txt;
       console.log(day4Date);
 
       var day4Windspeed = dayFour.children[3];
-      day4Windspeed.textContent ="Windspeed: " + data.list[16].wind.speed;
+      day4Windspeed.textContent ="Windspeed: " + data.list[21].wind.speed;
       console.log(day4Windspeed);
 
-      var icon4 = data.list[16].weather[0].icon;
+      var icon4 = data.list[21].weather[0].icon;
       var icon4Link = `https://openweathermap.org/img/wn/${icon4}.png`;
       var day4Icon = dayFour.children[1];
       day4Icon.setAttribute("src", icon4Link);
@@ -157,22 +157,22 @@ function getWeatherForecast(cityTest) {
       //
 
       var day5Temp = dayFive.children[2];
-      day5Temp.textContent = "Temperature: " + Math.round(data.list[24].main.temp) + "°C";
+      day5Temp.textContent = "Temperature: " + Math.round(data.list[29].main.temp) + "°C";
       console.log(day5Temp);
 
       var day5Humidity = dayFive.children[4];
-      day5Humidity.textContent = "Humidity: " + data.list[24].main.humidity;
+      day5Humidity.textContent = "Humidity: " + data.list[29].main.humidity;
       console.log(day5Humidity);
 
       var day5Date = dayFive.children[0];
-      day5Date.textContent = data.list[24].dt_txt;
+      day5Date.textContent = data.list[29].dt_txt;
       console.log(day5Date);
 
       var day5Windspeed = dayFive.children[3];
-      day5Windspeed.textContent ="Windspeed: " + data.list[24].wind.speed;
+      day5Windspeed.textContent ="Windspeed: " + data.list[29].wind.speed;
       console.log(day5Windspeed);
 
-      var icon5 = data.list[24].weather[0].icon;
+      var icon5 = data.list[29].weather[0].icon;
       var icon5Link = `https://openweathermap.org/img/wn/${icon5}.png`;
       var day5Icon = dayFive.children[1];
       day5Icon.setAttribute("src", icon5Link);
@@ -181,22 +181,22 @@ function getWeatherForecast(cityTest) {
       //
 
       var day6Temp = daySix.children[2];
-      day6Temp.textContent = "Temperature: " + Math.round(data.list[32].main.temp) + "°C";
+      day6Temp.textContent = "Temperature: " + Math.round(data.list[37].main.temp) + "°C";
       console.log(day6Temp);
 
       var day6Humidity = daySix.children[4];
-      day6Humidity.textContent = "Humidity: " + data.list[32].main.humidity;
+      day6Humidity.textContent = "Humidity: " + data.list[37].main.humidity;
       console.log(day6Humidity);
 
       var day6Date = daySix.children[0];
-      day6Date.textContent = data.list[32].dt_txt;
+      day6Date.textContent = data.list[37].dt_txt;
       console.log(day6Date);
 
       var day6Windspeed = daySix.children[3];
-      day6Windspeed.textContent ="Windspeed: " + data.list[32].wind.speed;
+      day6Windspeed.textContent ="Windspeed: " + data.list[37].wind.speed;
       console.log(day6Windspeed);
 
-      var icon6 = data.list[32].weather[0].icon;
+      var icon6 = data.list[37].weather[0].icon;
       var icon6Link = `https://openweathermap.org/img/wn/${icon6}.png`;
       var day6Icon = daySix.children[1];
       day6Icon.setAttribute("src", icon6Link);
@@ -207,91 +207,3 @@ function getWeatherForecast(cityTest) {
 
 
 
-
-
-      //  for (var i=0; i<dataResponse.length; i+8) {
-      //       var dates = data.list[i].dt_txt;
-      //        var temp = data.list[i].main.temp;
-      //        var humidity = data.list[i].main.humidity;
-      //        var windspeed = data.lsit[i].wind.speed;
-      //        var icon = data.list[i].weather[0].icon;
-      
-      //        console.log(dataResponse.length);
-      //        for (var j=0; j<daysArrays.length;j++) {
-      //           daysArrays[j].children[0].textContent = dates[i];
-      //           daysArrays[j].children[1].textContent = icon[i];
-      //           daysArrays[j].children[2].textContent = temp[i];
-      //           daysArrays[j].children[3].textContent = windspeed[i];
-      //           daysArrays[j].children[4].textContent = humidity[i];
-        
-                
-      //          }
-      
-      //       }
-
-      //   } 
-
-        
-
-        
-        
-    //     // cityNameEl.textContent = data.name;
-    //     // windpseedTodayEl.textContent ="Windspeed: " + data.wind.speed;
-    //     // tempTodayEl.textContent = "Temperature: " + Math.round(data.main.temp)+ "°C";
-    //     // humidityTodayEl.textContent = "Humidity: " + data.main.humidity;
-    //     // iconTodayEl.textContent = data.weather[0].icon;
-    //   );
-//}
-
- function savingInfo() {
-    //event.preventDefault();
-    
-    // for (var i = 0; i < saveButton.length; i++) {
-    //    var button = saveButton[i];
-       
-        button.addEventListener("click", function(event) {
-        event.preventDefault();
-       
-        var previousSearchedItem = searchTest.value.trim();
-        // var eventTextInfo = this.previousElementSibling.value;
-  
-        // console.log(eventTextInfo);
-        // console.log(id);
-        
-        localStorage.setItem(previousSearchedItem, getWeather(cityTest));
-      });
-    }
-  
-  
-
-
-//  function getSavedInfo() {
-//     
-//       var savedTextInfo = localStorage.getItem(id);
-//       if (savedTextInfo) {
-//         eventText[i].value = savedTextInfo;
-//       }
-//     }
-//   }
-  
-  
-//   getSavedInfo();
-
-// function finalWeather (data) {
-//     for (var i=0; i<data.length; i++) {
-
-//     }
-
-// }
-
-// fetch('https://api.openweathermap.org/data/2.5/weather?q=london&appid=a7eda06416e8b65bfc4e1612aa389971', {
-//   method: 'GET', //GET is the default.
-//   credentials: 'same-origin', // include, *same-origin, omit
-//   redirect: 'follow', // manual, *follow, error
-// })
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   });
