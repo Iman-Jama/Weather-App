@@ -19,7 +19,7 @@ Here is a screenshots of the website:
 ---
 
 Here is a link to my website:
- https://iman-jama.github.io/Weather-Application/
+ https://iman-jama.github.io/Weather-App/
 
 
 ## Contact:
