@@ -10,6 +10,7 @@ var dayThree = document.getElementById('day3');
 var dayFour = document.getElementById('day4');
 var dayFive = document.getElementById('day5');
 var daySix = document.getElementById('day6');
+var searchBox = document.getElementById('aside');
 
 var daysArrays = [dayTwo, dayThree, dayFour, dayFive, daySix];
 
@@ -24,18 +25,15 @@ var iconTodayEl = document.getElementById('todayIcon')
 var dateTodayEl = document.getElementById('todayDate')
 var todaysIconlink = "`https://openweathermap.org/img/wn/${icon}.png`"
 
-var weatherForecast = document.querySelectorAll('forecast');
-
-var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
-var APIkey = "a7eda06416e8b65bfc4e1612aa389971";
 
 var day2Date = document.getElementById('Day2');
-var dataResponse;
 
 var testButtton = document.getElementById("buttonTT");
 testButtton.addEventListener("click",function() {
   getWeatherForecast();
   getWeather();
+
+ 
 });
 function getWeather (cityTest){
     // var city = searchedCity.value.trim();

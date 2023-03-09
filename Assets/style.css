@@ -10,16 +10,15 @@
    
     height:100vh;
     
-    
  }
 
  .forecast {
     border-radius: 10px;
     margin: 0px;
     padding: 0px;
-    align-text: center;
+    align-text: start;
     width: -moz-fit-content;
-   width: fit-content;
+   
  }
 
  li {
@@ -32,9 +31,18 @@
     clear: both;
     float: right;
     width: 20%;
-    height: 100%;
+    height: 50%;
     display: inline;
     margin-left: 5%;
     margin-bottom: 5%;
+    border-radius: 5%;
 }
 
+#cityName {
+   font-size: 40px;
+   text-decoration: underline;
+}
+
+div p.fw-bold {
+   text-decoration: underline;
+}
