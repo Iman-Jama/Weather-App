@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+ body {
+    font-family: 'manrope', sans-serif;
+    background: url('https://images.pexels.com/photos/11331433/pexels-photo-11331433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    
+    
+ }
+
+ .forecast {
+    border-radius: 10px;
+ }
+
+ li {
+    list-style: none;
+ }
+
+ aside {
+    margin-right: 10px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    display: inline;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+

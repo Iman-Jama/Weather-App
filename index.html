@@ -4,83 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <title>Weather App</title>
 </head>
 <body>
+    
     <section>
-        <h1 class="display-1 text-center fw-bold bg-success p-3 text-white">The Weather Application</h1>
+        <h1 class="display-1 text-center fw-bold p-3 text-white">The Weather Application</h1>
     </section>
-    
+   <aside class="d-flex justify-content-start float-start rounded-5 bg-dark bg-opacity-50 border border-white">
     <section class="container p-3">
-        <div id=search-bar class=" row bg-success bg-opacity-50">
-            <form id="form" > 
-                <h2 class="col-4">Search here by city name:</h2>
-                <input type="search" id="query" name="q" placeholder="Search..." aria-label="search by city">
-                <button class="btn bg-success text-white">Search</button>
-              </form>
+        <div id=search-bar class="row">
+            <h2 class="col-4 text-white font-size-md d-block">Search city name:</h2>
+            <input type="text" id="myTestingInput" placeholder="Search...">
+            <button class="btn bg-dark text-white" id="buttonTT">SEARCH</button>   
+        </div>
+        <div>
+            <ul id="previous-search" class="list-group fst-italic text-white">Previous searches:
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+
+            </ul>
+            
+        </div>
+        <!-- <div id=search-bar class="row">
             <div>
-                <ul class="list-group fst-italic">Previous searches:</ul>
+                <h2 class="col-4 text-white font-size-md d-block">Search test name:</h2>
+                <input type="text" id="myTestingInput">
+                <button id="buttonTT">SEARCH</button>
+                <!-- <input type="text" id="query" name="q" placeholder="Search..." aria-label="search by city">
+                <button class="btn bg-dark text-white" id="searchBtn">Search</button> -->
+            <!-- </div>
+            <div>
+                <ul id="previous-search" class="list-group fst-italic text-white">Previous searches:
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+
+                </ul>
                 
-            </div>
+            </div> --> -->
         </div >
+        
     </section>
-    
+    </aside> 
         <div class="container">
             <div class="row">
-                <div>
-                    <h2 class= "fw-bold col-6  my-3 p-3 bg-success bg-opacity-50 border-outline border-2">Weather now</h2>
+                <div class="forecast rounded-5 fw-bold col-6  my-3 p-3 text-white border border-white bg-dark bg-opacity-50" id="today">
+                    <p id="todayDate"></p>
+                    <p id="cityName"></p>
+                    <p></p>
+                    <p id="todayIcon"></p>
+                    <p></p>
+                    <p id="temperatureToday"></p>
+                    <p></p>
+                    <p id="windSpeedToday"></p>
+                    <p></p>
+                    <p id="humidityToday"></p>
+                    <p></p>
+                    </div>
                 </div>
-            
-            </div>
         </div>
     </section>
     <div class="container-lg my-5">
-        <div class="row justify-content-start">
-            <div class="col p-5 border bg-dark text-white">
-                <p class="fw-bold">Day 2</p>
-                <p>Date</p>
-                <p>Temperature:</p>
-                <p>Wind speed:</p>
-                <p>Humidity:</p>
+        <div class="row">
+            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day2">
+                <p class="fw-bold" id="day2date">Day 2</p>
+                <p id="day2">Date</p>
+                <p></p>
+                <p class="Temperature">Temperature:</p>
+                <p></p>
+                <p class="windspeed">Wind speed:</p>
+                <p></p>
+                <p class="Humidity">Humidity:</p>
+                <p></p>
             </div>
-            <div class="col p-5 border bg-dark text-white">
-                <p class="fw-bold">Day 3</p>
-                <p>Date</p>
-                <p>Temperature:</p>
-                <p>Wind speed:</p>
-                <p>Humidity:</p>
+
+            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day3">
+                <p class="fw-bold" id="day3date">Day 3</p>
+                <p class="date">Date</p>
+                <p></p>
+                <p class="Temperature">Temperature:</p>
+                <p></p>
+                <p class="windspeed">Wind speed:</p>
+                <p></p>
+                <p class="Humidity">Humidity:</p>
+                <p></p>
             </div>
-            <div class="col p-5 border bg-dark text-white">
-                <p class="fw-bold">Day 4</p>
-                <p>Date</p>
-                <p>Temperature:</p>
-                <p>Wind speed:</p>
-                <p>Humidity:</p>
+
+            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day4">
+                <p class="fw-bold" id="day4date">Day 4</p>
+                <p class="date">Date</p>
+                <p></p>
+                <p class="Temperature">Temperature:</p>
+                <p></p>
+                <p class="windspeed">Wind speed:</p>
+                <p></p>
+                <p class="Humidity">Humidity:</p>
+                <p></p>
             </div>
-            <div class="col p-5 border bg-dark text-white">
-                <p class="fw-bold">Day 5</p>
-                <p>Date</p>
-                <p>Temperature:</p>
-                <p>Wind speed:</p>
-                <p>Humidity:</p>
+
+            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day5">
+                <p class="fw-bold" id="day5date">Day 5</p>
+                <p class="date">Date</p>
+                <p></p>
+                <p class="Temperature">Temperature:</p>
+                <p></p>
+                <p class="windspeed">Wind speed:</p>
+                <p></p>
+                <p class="Humidity">Humidity:</p>
+                <p></p>
             </div>
-            <div class="col p-5 border bg-dark text-white">
-                <p class="fw-bold">Day 6</p>
-                <p>Date</p>
-                <p>Temperature:</p>
-                <p>Wind speed:</p>
-                <p>Humidity:</p>
+
+            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white justify-content-start" id="day6">
+                <p class="fw-bold" id="day6date">Day 6</p>
+                <p class="date">Date</p>
+                <p></p>
+                <p class="Temperature">Temperature:</p>
+                <p></p>
+                <p class="windspeed">Wind speed:</p>
+                <p></p>
+                <p class="Humidity">Humidity:</p>
+                <p></p>
             </div>
         </div>
     </div>
-            
 
-     
     
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+    <script src="Assets/Javascript/script.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs"></script>
 </body>
 </html>
