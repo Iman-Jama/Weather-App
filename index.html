@@ -13,55 +13,29 @@
     
     <section>
         <h1 class="display-1 text-center fw-bold p-3 text-white">The Weather Application</h1>
+        
     </section>
-   <aside class="d-flex justify-content-start float-start rounded-5 bg-dark bg-opacity-50 border border-white">
-    <section class="container p-3">
-        <div id=search-bar class="row">
+   <aside class="justify-content-start float-start rounded-5 bg-dark bg-opacity-50 border border-white">
+    <section class="container p-3 rounded-5">
+        <div id=search-bar class="row rounded-5">
             <h2 class="col-4 text-white font-size-md d-block">Search city name:</h2>
             <input type="text" id="myTestingInput" placeholder="Search...">
             <button class="btn bg-dark text-white" id="buttonTT">SEARCH</button>   
         </div>
-        <div>
             <ul id="previous-search" class="list-group fst-italic text-white">Previous searches:
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-
-
             </ul>
-            
-        </div>
-        <!-- <div id=search-bar class="row">
-            <div>
-                <h2 class="col-4 text-white font-size-md d-block">Search test name:</h2>
-                <input type="text" id="myTestingInput">
-                <button id="buttonTT">SEARCH</button>
-                <!-- <input type="text" id="query" name="q" placeholder="Search..." aria-label="search by city">
-                <button class="btn bg-dark text-white" id="searchBtn">Search</button> -->
-            <!-- </div>
-            <div>
-                <ul id="previous-search" class="list-group fst-italic text-white">Previous searches:
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-
-
-                </ul>
-                
-            </div> --> -->
-        </div >
-        
+     
     </section>
     </aside> 
         <div class="container">
             <div class="row">
-                <div class="forecast rounded-5 fw-bold col-6  my-3 p-3 text-white border border-white bg-dark bg-opacity-50" id="today">
+                <div class="forecast rounded-5 fw-bold col-10  my-3 p-3 text-white border border-white bg-dark bg-opacity-50" id="today">
+            <p class="text-start align-top fw-bold p-3 text-white">Use the search bar to search for any cities weather information</p>
+
                     <p id="todayDate"></p>
                     <p id="cityName"></p>
                     <p></p>
-                    <p id="todayIcon"></p>
+                    <img id="todayIcon"></img>
                     <p></p>
                     <p id="temperatureToday"></p>
                     <p></p>
@@ -73,69 +47,74 @@
                 </div>
         </div>
     </section>
-    <div class="container-lg my-5">
+    <div class="container-lg my-5 justify-content-start">
         <div class="row">
-            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day2">
-                <p class="fw-bold" id="day2date">Day 2</p>
-                <p id="day2">Date</p>
+
+          <div class="forecast col-3 p-5 border bg-dark bg-opacity-75 text-white" id="day2">
+            <p class="fw-bold fst-underlined" id="day2date"></p>
+            <img></img> 
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            
+          </div>
+
+            <div class="forecast col-3 p-5 border bg-dark bg-opacity-75 text-white justify-content-start" id="day3">
+                <p class="fw-bold" id="day3date"></p>
+                <img></img>
                 <p></p>
-                <p class="Temperature">Temperature:</p>
                 <p></p>
-                <p class="windspeed">Wind speed:</p>
                 <p></p>
-                <p class="Humidity">Humidity:</p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
 
-            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day3">
-                <p class="fw-bold" id="day3date">Day 3</p>
-                <p class="date">Date</p>
+            <div class="forecast col-3 p-5 border bg-dark bg-opacity-75 text-white justify-content-start" id="day4">
+                <p class="fw-bold" id="day4date"></p>
+                <img></img>
                 <p></p>
-                <p class="Temperature">Temperature:</p>
                 <p></p>
-                <p class="windspeed">Wind speed:</p>
                 <p></p>
-                <p class="Humidity">Humidity:</p>
                 <p></p>
-            </div>
-
-            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day4">
-                <p class="fw-bold" id="day4date">Day 4</p>
-                <p class="date">Date</p>
                 <p></p>
-                <p class="Temperature">Temperature:</p>
                 <p></p>
-                <p class="windspeed">Wind speed:</p>
-                <p></p>
-                <p class="Humidity">Humidity:</p>
                 <p></p>
             </div>
 
-            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white" id="day5">
-                <p class="fw-bold" id="day5date">Day 5</p>
-                <p class="date">Date</p>
+            <div class="forecast col-3 p-5 border bg-dark bg-opacity-75 text-white justify-content-start" id="day5">
+                <p class="fw-bold" id="day5date"></p>
+                <img></img>
                 <p></p>
-                <p class="Temperature">Temperature:</p>
                 <p></p>
-                <p class="windspeed">Wind speed:</p>
                 <p></p>
-                <p class="Humidity">Humidity:</p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
 
-            <div class="forecast col-2 p-5 border bg-dark bg-opacity-75 text-white justify-content-start" id="day6">
-                <p class="fw-bold" id="day6date">Day 6</p>
-                <p class="date">Date</p>
+            <div class="forecast col-3 p-5 border bg-dark bg-opacity-75 text-white justify-content-start" id="day6">
+                <p class="fw-bold" id="day6date"></p>
+                <img></img>
                 <p></p>
-                <p class="Temperature">Temperature:</p>
                 <p></p>
-                <p class="windspeed">Wind speed:</p>
                 <p></p>
-                <p class="Humidity">Humidity:</p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <p></p>
             </div>
         </div>
     </div>
+    <footer class=" text-center fw-bold text-white bg-dark bg-opacity-75">
+        <p>
+            &lt;&lt;&lt;&copy; IMAN JAMA ❤️ &gt;&gt;&gt;
+        </p>
+</footer>
+
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    

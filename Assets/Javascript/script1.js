@@ -61,3 +61,46 @@ for (var i = 0; i < dataResponse.length; i += 8) {
     }
   }
 }
+
+
+ //getWeather();
+//  testButtton.addEventListener("click",getWeatherForecast);
+//  function getWeatherForecast (cityTest) {
+//     // var city = searchedCity.value.trim();
+//     // console.log(city);
+//     var searchTest = document.getElementById("myTestingInput");
+    
+//     var cityTest = searchTest.value.trim();
+
+//     fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + cityTest + "&appid=a7eda06416e8b65bfc4e1612aa389971&units=metric",  {
+//         method: 'GET', //GET is the default.
+//         credentials: 'same-origin', // include, *same-origin, omit
+//         redirect: 'follow', // manual, *follow, error
+//       })
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (data) {
+//         console.log(data);
+//         //console.log(data.name);
+//         //console.log(data.main.humidity);
+
+//          dataResponse = data;
+//       });
+
+//       var day2Temp = dayTwo.children[2]
+//       day2Temp.textContent = dataResponse.list[0].main.temp;
+//       var dayTwoHumidity = dayTwo.children[4];
+//       dayTwoHumidity.textContent = dataResponse.list[0].main.humidity;
+//       var dayTwoDate = dayTwo.children[0];
+//       dayTwoDate.textContent = dataResponse.list[0].dt_txt;
+//       var dayTwoWindspeed = dayTwo.children[3];
+//       dayTwoWindspeed.textContent = dataResponse.list[0].wind.speed;
+//       var icon = data.list[i].weather[0].icon;
+//       var iconLink = `https://openweathermap.org/img/wn/${icon}.png`;
+//       var dayTwoIcon = dayTwo.children[1];
+//       dayTwoIcon.setAttribute("src", iconLink);
+
+//     };
+
+
