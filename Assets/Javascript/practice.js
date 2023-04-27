@@ -1,6 +1,6 @@
 function searchHistory(cityTest) {
-	// Remove existing search history entries that contain the current movieName
-			document.querySelectorAll('.past-search[data-movie-name="' + movieName + '"]').forEach(function(elem) {
+	// Remove existing search history entries that contain the current city
+			document.querySelectorAll('.past-search[city-name="' + cityTest + '"]').forEach(function(elem) {
 			elem.remove();
 			});
 		
@@ -15,16 +15,16 @@ function searchHistory(cityTest) {
 				searchHistory(cityTest);
 			})
 				
-	// Container for movie entry: create <div> element with a "past-search-container" class and append movie entry to the Container
+	// Container for city entry: create <div> element with a "past-search-container" class and append city name to the Container
 			var searchEntryContainer = document.createElement("div");
 			searchEntryContainer.classList.add("past-search-container");
 			searchEntryContainer.append(searchHistoryEntry);
 		
-	// Append Container for movie to Search History Container Element
+	// Append Container for city to Search History Container Element
 			var searchHistoryContainerEl = document.getElementById("aside");
 			searchHistoryContainerEl.append(searchEntryContainer);
 		
-	// The current movieName is pushed onto the savedSearches array, and the updated array is stored in local storage
+	// The current name is pushed onto the savedSearches array, and the updated array is stored in local storage
 			savedSearches.push(cityTest);
 			localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
 		
@@ -38,8 +38,6 @@ function searchHistory(cityTest) {
 	// Clear search Query field
 			searchTest.value = "";
 		};
-		
-
 		
 	// Load saved search history entries from local storage and display it to the search history container
 		
