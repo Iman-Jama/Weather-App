@@ -17,15 +17,17 @@ var todaysIconlink = "`https://openweathermap.org/img/wn/${icon}.png`"
 
 var testButtton = document.getElementById("buttonTT");
 testButtton.addEventListener("click",function() {
-  getWeatherForecast();
-  getWeather();
+  var cityTest = searchTest.value.trim();
+  console.log(cityTest);
+  getWeatherForecast(cityTest);
+  getWeather(cityTest);
  
 });
 
 
 
 function getWeather (cityTest){
-    var cityTest = searchTest.value.trim();
+   
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityTest+"&appid=a7eda06416e8b65bfc4e1612aa389971&units=metric",  {
         method: 'GET', //GET is the default.
         credentials: 'same-origin', // include, *same-origin, omit
@@ -52,8 +54,8 @@ function getWeather (cityTest){
 }
 
 function getWeatherForecast(cityTest) {
-  var searchTest = document.getElementById("myTestingInput");
-  var cityTest = searchTest.value.trim();
+  // var searchTest = document.getElementById("myTestingInput");
+  console.log(cityTest);
 
   fetch(
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -96,8 +98,7 @@ function getWeatherForecast(cityTest) {
 };
 
 function searchHistory(cityTest) {
-  var searchTest = document.getElementById("myTestingInput");
-  var cityTest = searchTest.value.trim();
+ 
 	// Remove existing search history entries that contain the current city
 			document.querySelectorAll('.past-search[city-name="' + cityTest + '"]').forEach(function(elem) {
 			elem.remove();
@@ -110,9 +111,10 @@ function searchHistory(cityTest) {
 			searchHistoryEntry.textContent = cityTest;
 		
 			searchHistoryEntry.addEventListener("click", function(){
+      
 				getWeather (cityTest)
         getWeatherForecast(cityTest)
-				searchHistory(cityTest);
+				// searchHistory(cityTest);
 			})
 				
 	// Container for city entry: create <div> element with a "past-search-container" class and append city name to the Container
@@ -123,25 +125,23 @@ function searchHistory(cityTest) {
 			var searchHistoryContainerEl = document.getElementById("search-bar");
 			searchHistoryContainerEl.append(searchEntryContainer);
 		
-	
+	if (cityTest != ""){
 			savedSearches.push(cityTest);
 			localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
       console.log(savedSearches);
-		
+  };
 	//Checks if there are any saved searches in local storage
 			if (savedSearches.length > 0){
 	
 			var previousSavedSearches = localStorage.getItem("savedSearches");
 			savedSearches = JSON.parse(previousSavedSearches);
-			}
-		console.log(previousSavedSearches);
-	
+      }
 			searchTest.value = "";
 		};
 		
 	// Load saved search history entries from local storage and display it to the search history container
 		
-	   function loadSearchHistory (cityTest) {
+	   function loadSearchHistory () {
 			
       if (localStorage.getItem("savedSearches")) {
       savedSearches = JSON.parse(localStorage.getItem("savedSearches"));
