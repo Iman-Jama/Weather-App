@@ -12,17 +12,14 @@ var iconTodayEl = document.getElementById('todayIcon')
 var dateTodayEl = document.getElementById('todayDate')
 var todaysIconlink = "`https://openweathermap.org/img/wn/${icon}.png`"
 
-
-// var day2Date = document.getElementById('Day2');
-
 var testButtton = document.getElementById("buttonTT");
-testButtton.addEventListener("click",function() {
-  var cityTest = searchTest.value.trim();
-  console.log(cityTest);
-  getWeatherForecast(cityTest);
-  getWeather(cityTest);
- 
-});
+  testButtton.addEventListener("click",function() {
+    var cityTest = searchTest.value.trim();
+    console.log(cityTest);
+    getWeatherForecast(cityTest);
+    getWeather(cityTest);
+  
+  });
 
 
 
@@ -40,9 +37,9 @@ function getWeather (cityTest){
         console.log(data);
        
         cityNameEl.textContent = data.name;
-        windpseedTodayEl.textContent ="Windspeed: " + data.wind.speed;
+        windpseedTodayEl.textContent ="Windspeed: " + data.wind.speed +" mph";
         tempTodayEl.textContent = "Temperature: " + Math.round(data.main.temp)+ "°C";
-        humidityTodayEl.textContent = "Humidity: " + data.main.humidity;
+        humidityTodayEl.textContent = "Humidity: " + data.main.humidity +"%";
         var iconToday = data.weather[0].icon;
         todaysIconlink = `https://openweathermap.org/img/wn/${iconToday}.png`;
         iconTodayEl.setAttribute("src", todaysIconlink);
@@ -81,18 +78,15 @@ function getWeatherForecast(cityTest) {
       const dayHumidity = data.list[day].main.humidity;
       const dayWindspeed = data.list[day].wind.speed;
       const dayIcon = data.list[day].weather[0].icon;
+      console.log(dayIcon);
       const iconLink = `https://openweathermap.org/img/wn/${dayIcon}.png`;
 
       dayElement.children[0].textContent = dayDate;
-      dayElement.children[1].setAttribute = ('src', iconLink);
+      dayElement.children[1].setAttribute('src', iconLink);
       console.log(dayElement.children[1]);
       dayElement.children[2].textContent = `Temperature: ${daytemperature}°C`;
-      dayElement.children[3].textContent = `Windspeed: ${dayWindspeed}`;
-      dayElement.children[4].textContent = `Humidity: ${dayHumidity}`
-
-      searchHistory(cityTest);
-
-
+      dayElement.children[3].textContent = `Windspeed: ${dayWindspeed} mph`;
+      dayElement.children[4].textContent = `Humidity: ${dayHumidity}%`
     })
   });
 };
