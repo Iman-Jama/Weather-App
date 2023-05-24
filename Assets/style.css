@@ -5,21 +5,25 @@
 }
  body {
     font-family: 'manrope', sans-serif;
-    background: url('https://images.pexels.com/photos/11331433/pexels-photo-11331433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    background-repeat: no-repeat;
-   
-    height:100vh;
+    /* background: url('https://images.pexels.com/photos/11331433/pexels-photo-11331433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+    /* background-repeat:no-repeat; */
+    background-color: rgb(0, 187, 255);
     
  }
+ section.Header {
 
- .forecast {
+   font-family:'Archivo', sans-serif;
+
+ }
+
+ /* .forecast {
     border-radius: 10px;
     margin: 0px;
     padding: 0px;
     align-text: start;
     width: -moz-fit-content;
    
- }
+ } */
 
  li {
     list-style: none;
@@ -46,3 +50,11 @@
 div p.fw-bold {
    text-decoration: underline;
 }
+
+footer {
+   position: fixed;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 0;
+   font-size: 20px;
+ }
