@@ -4,10 +4,10 @@
     padding:0;
 }
  body {
-    font-family: 'manrope', sans-serif;
+   font-family: 'Archivo', sans-serif;
     /* background: url('https://images.pexels.com/photos/11331433/pexels-photo-11331433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
     /* background-repeat:no-repeat; */
-    background-color: rgb(0, 187, 255);
+    /* background-color: rgb(0, 187, 255); */
     
  }
  section.Header {
@@ -29,7 +29,7 @@
     list-style: none;
  }
 
- aside {
+ /* aside {
     margin-right: 10px;
     padding: 20px;
     clear: both;
@@ -40,7 +40,7 @@
     margin-left: 5%;
     margin-bottom: 5%;
     border-radius: 5%;
-}
+} */
 
 #cityName {
    font-size: 40px;
@@ -57,4 +57,8 @@ footer {
    transform: translateX(-50%);
    bottom: 0;
    font-size: 20px;
+ }
+
+ .btn {
+   @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointing tracking-wider
  }

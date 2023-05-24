@@ -5,37 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     
     <title>Weather App</title>
 </head>
-<body class="bg-blue-600/70">
+<body class="bg-rose-100">
     
-    <section class="Header text-center">
-        <h1 class="text-9xl fw-bolder">Forecastly</h1>
-        <h4 class="text-3xl italic fw-bolder">Your Reliable Weather Navigator</h4>
+    <section class="Header text-center mb-5 bg-slate-950 text-white py-3">
+        <h1 class="text-9xl">Forecastly</h1>
+        <h4 class="text-3xl italic pb-2">Your Reliable Weather Navigator</h4>
         
     </section>
-   <aside id="aside" class=" float-start rounded-5 bg-dark bg-opacity-50 border border-white">
-    <section class="container p-3 rounded-5">
-        <div id=search-bar class="row rounded-5">
-            <h2 class="col-4 text-white font-size-sm d-block">Search city name:</h2>
-            <input type="text" id="myTestingInput" placeholder="Search...">
-            <button class="btn bg-dark text-white" id="buttonTT">SEARCH</button>   
+   <aside id="aside" class="container px-4">
+    <section class="">
+        <div id=search-bar class="">
+            <h2 class="text-2xl mb-0.5 p-2">Search city name:</h2>
+            <input type="text" id="myTestingInput" class="w-full max-w-xs relative inline-flex items-center justify-center text-xl p-2 mb-2 mr-2 overflow-hidden text-gray-900 rounded-lg" placeholder="Search..."><br>
+            <button id="buttonTT" class="relative w-full max-w-xs inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-m font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                <span class="relative w-full max-w-xs px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">SEARCH</span>
+              </button>
         </div>
-            <ul id="previous-search" class="list-group fst-italic text-white fw-bold">
+        <div>
+            <ul id="previous-search" class="fw-bolder text-xl">
             </ul>
-     
+         </div>   
     </section>
     </aside>
     <section>
         <div class="container mx-auto px-4 border-solid rounded-lg shadow-xl border-white outline-1">
             <div class="row box-content object-left">
-                <div class="forecast id="today">
+                <div class="forecast" id="today">
             
 
                     <p id="todayDate"></p>
@@ -53,12 +55,11 @@
                 </div>
         </div>
     </section>
-    <div>
-        <h3 class="mt-5 text-center"> 5 Day Weather Forecast</h3>
-    <div class="container-lg my-5 justify-content-start mx-auto">
-        <div class="row">
+    <section>
+        <h3 class="mt-5 text-center text-4xl"> 5 Day Weather Forecast</h3>
+    <div class="grid grid-cols-5 gap-px mx-10 border-red-800">
 
-          <div class="forecast col p-2 mx-3 border bg-dark bg-opacity-75 text-white" id="day2">
+          <div class="container mx-auto border-solid rounded-lg shadow-xl border-white outline-2" id="day2">
             <p class="fw-bold fst-underlined" id="day2date"></p>
             <img></img> 
             <p></p>
@@ -68,7 +69,7 @@
             
           </div>
 
-            <div class="forecast col mx-3 p-2 border bg-dark bg-opacity-75 text-white justify-content-start" id="day3">
+            <div class="border-red-800 border-solid" id="day3">
                 <p class="fw-bold" id="day3date"></p>
                 <img></img>
                 <p></p>
@@ -77,7 +78,7 @@
                 
             </div>
 
-            <div class="forecast col mx-3 p-2 border bg-dark bg-opacity-75 text-white justify-content-start" id="day4">
+            <div class="border-red-800" id="day4">
                 <p class="fw-bold" id="day4date"></p>
                 <img></img>
                 <p></p>
@@ -85,7 +86,7 @@
                 <p></p>
             </div>
 
-            <div class="forecast col mx-3 p-2 border bg-dark bg-opacity-75 text-white justify-content-start" id="day5">
+            <div class="border-red-800" id="day5">
                 <p class="fw-bold" id="day5date"></p>
                 <img></img>
                 <p></p>
@@ -93,7 +94,7 @@
                 <p></p>
             </div>
 
-            <div class="forecast col mx-3 p-2 border bg-dark bg-opacity-75 text-white justify-content-start" id="day6">
+            <div class="border-red-800" id="day6">
                 <p class="fw-bold" id="day6date"></p>
                 <img></img>
                 <p></p>
@@ -102,9 +103,9 @@
             </div>
         </div>
     </div>
-</div>
+    </section>
     <footer>
-        <p class="fw-bolder text-white">
+        <p class="fw-bolder text-black">
             &lt;&lt;&lt;&copy; IMAN JAMA ❤️ &gt;&gt;&gt;
         </p>
 </footer>
