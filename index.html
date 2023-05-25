@@ -14,7 +14,7 @@
     <title>Weather App</title>
 </head>
 
-<body class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-400 to-sky-200">
+<body class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-400 to-sky-200 overflow-x-clip">
 
     <section class="Header text-center mb-5 bg-slate-950 text-white py-3">
         <h1 class="text-7xl">Forecastly</h1>
@@ -54,7 +54,7 @@
                             <p></p>
                             <img id="todayIcon"></img>
                             <p></p>
-                            <p id="temperatureToday"></p>
+                            <p id="temperatureToday" class="text-2xl"></p>
                             <p></p>
                             <p id="windSpeedToday"></p>
                             <p></p>
@@ -69,56 +69,56 @@
     <h3
         class="mr-96 ml-96 my-10 py-2 text-center text-4xl border-solid rounded-lg border-black bg-slate-950 text-white">
         5 Day Weather Forecast</h3>
-    <section class="container my-5 py-5 mr-96  ml-96">
+    <section class="container my-5 py-5 mr-96  ml-72">
 
-        <div class="grid grid-cols-5 gap-px mx-10">
+        <div class="grid grid-cols-6">
 
-            <div class=" border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 text-center" id="day2">
+            <div class=" border-solid rounded-lg shadow-2xl border-slate-950 outline-2 mr-12 ml-5 px-3 py-3 text-left" id="day2">
                 <p class="fw-bold fst-underlined" id="day2date"></p>
                 <img class=" "></img>
-                <p></p>
+                <p class="text-xl"></p>
                 <p></p>
                 <p></p>
                 <p></p>
 
             </div>
 
-            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 text-center" id="day3">
+            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 px-3 py-3 text-left" id="day3">
                 <p class="fw-bold" id="day3date"></p>
                 <img></img>
-                <p></p>
+                <p class="text-xl"></p>
                 <p></p>
                 <p></p>
 
             </div>
 
-            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 text-center" id="day4">
+            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 px-3 py-3 text-left" id="day4">
                 <p class="fw-bold" id="day4date"></p>
                 <img></img>
-                <p></p>
+                <p class="text-xl"></p>
                 <p></p>
                 <p></p>
             </div>
 
-            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 px-3 py-3 text-left" id="day5">
+            <div class="border-solid rounded-lg shadow-2xl border-slate-950 outline-2 mr-12 ml-5 px-3 py-3 text-left" id="day5">
                 <p class="fw-bold" id="day5date"></p>
                 <img></img>
-                <p></p>
+                <p class="text-xl"></p>
                 <p></p>
                 <p></p>
             </div>
 
-            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 text-center" id="day6">
+            <div class="border-solid rounded-lg shadow-xl border-slate-950 outline-2 mr-12 ml-5 px-3 py-3 text-left" id="day6">
                 <p class="fw-bold" id="day6date"></p>
                 <img></img>
-                <p></p>
+                <p class="text-xl"></p>
                 <p></p>
                 <p></p>
             </div>
         </div>
         </div>
     </section>
-    <footer>
+    <footer class=" sticky bottom-0">
         <p class="fw-bolder text-black">
             &lt;&lt;&lt;&copy; IMAN JAMA ❤️ &gt;&gt;&gt;
         </p>

@@ -59,23 +59,25 @@ footer {
    font-size: 20px;
  }
 
- .past-search-container {
+ /* .past-search-container {
    float:right;
    position:absolute;
    left: 15px;
    right: 1000px;
 
- }
+ } */
  
  .past-search {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   padding: 6px 14px;
   font-family: sans-serif;
   border-radius: 6px;
   border: none;
+  margin-right: 1200px;
+  margin-bottom:3px;
 
   color: #fff;
   background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
