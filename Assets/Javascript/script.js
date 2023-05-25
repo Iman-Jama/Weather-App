@@ -99,7 +99,7 @@ function searchHistory(cityTest) {
 			});
 		
 
-			var searchHistoryEntry = document.createElement("p");
+			var searchHistoryEntry = document.createElement("li");
 			searchHistoryEntry.classList.add("past-search");
 			searchHistoryEntry.setAttribute("city-name", cityTest);
 			searchHistoryEntry.textContent = cityTest;
