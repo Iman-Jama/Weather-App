@@ -1,31 +1,35 @@
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin:0;
     padding:0;
 }
  body {
-    font-family: 'manrope', sans-serif;
-    background: url('https://images.pexels.com/photos/11331433/pexels-photo-11331433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-    background-repeat: no-repeat;
-   
-    height:100vh;
+   font-family: 'Archivo', sans-serif;
+    /* background: url('https://images.pexels.com/photos/11331433/pexels-photo-11331433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+    /* background-repeat:no-repeat; */
+    /* background-color: rgb(0, 187, 255); */
     
  }
+ section.Header {
 
- .forecast {
+   font-family:'Archivo', sans-serif;
+
+ }
+
+ /* .forecast {
     border-radius: 10px;
     margin: 0px;
     padding: 0px;
     align-text: start;
     width: -moz-fit-content;
    
- }
+ } */
 
  li {
     list-style: none;
  }
 
- aside {
+ /* aside {
     margin-right: 10px;
     padding: 20px;
     clear: both;
@@ -36,7 +40,7 @@
     margin-left: 5%;
     margin-bottom: 5%;
     border-radius: 5%;
-}
+} */
 
 #cityName {
    font-size: 40px;
@@ -45,4 +49,47 @@
 
 div p.fw-bold {
    text-decoration: underline;
+}
+
+footer {
+   position: fixed;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 0;
+   font-size: 20px;
+ }
+
+ /* .past-search-container {
+   float:right;
+   position:absolute;
+   left: 15px;
+   right: 1000px;
+
+ } */
+ 
+ .past-search {
+
+  display: inline-block;
+  flex-direction: row;
+  align-items:center;
+  padding: 6px 14px;
+  font-family: sans-serif;
+  border-radius: 6px;
+  border: none;
+  margin-right: 20px;
+  margin-bottom:3px;
+  float: left;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.past-search:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
 }

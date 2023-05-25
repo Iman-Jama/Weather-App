@@ -38,7 +38,7 @@ function getWeather (cityTest){
        
         cityNameEl.textContent = data.name;
         windpseedTodayEl.textContent ="Windspeed: " + data.wind.speed +" mph";
-        tempTodayEl.textContent = "Temperature: " + Math.round(data.main.temp)+ "°C";
+        tempTodayEl.textContent = Math.round(data.main.temp)+ "°C";
         humidityTodayEl.textContent = "Humidity: " + data.main.humidity +"%";
         var iconToday = data.weather[0].icon;
         todaysIconlink = `https://openweathermap.org/img/wn/${iconToday}.png`;
@@ -74,7 +74,7 @@ function getWeatherForecast(cityTest) {
     days.forEach((day, index)=>{
       dayElement = document.getElementById(`day${index + 2}`);
       const dayDate = data.list[day].dt_txt
-      const daytemperature = Math.round(data.list[day].main.temp) + "°C";
+      const daytemperature = Math.round(data.list[day].main.temp);
       const dayHumidity = data.list[day].main.humidity;
       const dayWindspeed = data.list[day].wind.speed;
       const dayIcon = data.list[day].weather[0].icon;
@@ -84,7 +84,7 @@ function getWeatherForecast(cityTest) {
       dayElement.children[0].textContent = dayDate;
       dayElement.children[1].setAttribute('src', iconLink);
       console.log(dayElement.children[1]);
-      dayElement.children[2].textContent = `Temperature: ${daytemperature}°C`;
+      dayElement.children[2].textContent = `${daytemperature}°C`;
       dayElement.children[3].textContent = `Windspeed: ${dayWindspeed} mph`;
       dayElement.children[4].textContent = `Humidity: ${dayHumidity}%`
     })
@@ -99,7 +99,7 @@ function searchHistory(cityTest) {
 			});
 		
 
-			var searchHistoryEntry = document.createElement("p");
+			var searchHistoryEntry = document.createElement("li");
 			searchHistoryEntry.classList.add("past-search");
 			searchHistoryEntry.setAttribute("city-name", cityTest);
 			searchHistoryEntry.textContent = cityTest;
