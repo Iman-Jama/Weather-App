@@ -4,8 +4,6 @@
       <img src="https://img.shields.io/bower/l/css" /></a> 
 
 ## Table of Contents:
-  
-  ## Table of Contents
 
 - [How It Works](#how-it-works)
 - [Technologies Used](#technologies-used)
